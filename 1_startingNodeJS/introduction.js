@@ -94,32 +94,83 @@ const person = {
 person.greet();
 person.greet1();
 
-*/
 
 // Array
 
 const hobbies = ["sports", "cooking", 69, true, {Gym: "Running", activity:"swimming" }];
-// for (let i = 0; i < hobbies.length; i++) {
-    // console.log(i) // 1 2 3 4
-//     console.log(hobbies[i]); // all hobies 
-// };
+for (let i = 0; i < hobbies.length; i++) {
+    console.log(i) // 1 2 3 4
+    console.log(hobbies[i]); // all hobies 
+};
 
-// for (let i of hobbies) {
-//     console.log(i) // all hobies
-// };
+for (let i of hobbies) {
+    console.log(i) // all hobies
+};
 
-// for (let i in hobbies) {
-//     console.log(i) // 1 2 3 4
-// };
+for (let i in hobbies) {
+    console.log(i) // 1 2 3 4
+};
 
-// console.log(hobbies.map(i => {
-//     return (`hobby is: ${i}`)   // it create one new array without changing previous array
-// }));
-// console.log(hobbies);
-
-
+console.log(hobbies.map(i => {
+    return (`hobby is: ${i}`)   // it create one new array without changing previous array
+}));
+console.log(hobbies);
 
 
 
+// Rest and Spread Operator
+
+const hobbies1 = ["sports", "cooking", 69, true, "swimming"];
+
+const copyhobbies1 = hobbies1.slice() // it copy the array and put in another array
+
+console.log(copyhobbies1); // [ 'sports', 'cooking', 69, true, 'swimming' ]
+
+const copyhobbies2 = [hobbies1] // copyhobbies2 is an array and inside this array one another array is available
+console.log(copyhobbies2);  // [ [ 'sports', 'cooking', 69, true, 'swimming' ] ]
 
 
+// Spread Operator // Array
+const copyhobbies3 = [...hobbies1] // in this case it take all element from parent array and put it in new array
+console.log(copyhobbies3);  // [ 'sports', 'cooking', 69, true, 'swimming' ]
+
+// Spread Operator // Objects
+
+const person1 = {
+    name: "Brijesh",
+    age: 27,
+    greet: function() {
+        console.log(`Hi I am ${this.name}`) 
+    }
+};
+
+const copyObject = {...person1};  // it gives copy of object
+console.log(copyObject);  // { name: 'Brijesh', age: 27, greet: [Function: greet] }
+
+*/
+
+// Rest Operator
+
+const toArray = (arg1, arg2, arg3) => {
+    // return [arg1, arg2, arg3]; // [1, 2, 3]
+    // return (arg1, arg2, arg3); // 3 
+    return (arg1 + arg2 + arg3); // 6
+}
+
+// console.log(toArray(1,2,3));
+
+const toArray1 = (arg1, arg2, arg3) => {
+    return [arg1, arg2, arg3]; // when we give 4 element then it give only first 3 element
+}
+
+console.log(toArray1(1,2,3,4)); // [1,2,3]
+
+const toArray2 = (...args) => {   // rest operator is also look like spread operator but place decide who you call it
+    return args; // [1,2,3,4]
+}
+
+console.log(toArray2(1,2,3,4)); // when we give 4 element then it give only first 3 element
+
+// when we use operaton to pull element or propertyes out of array and objects its called spread operator
+
+// And when we use to murge multiple argument into an Array and used it in the argument list of a function then its a rest operator 
