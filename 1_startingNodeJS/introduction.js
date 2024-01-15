@@ -72,7 +72,6 @@ const productOfTwoNumber = (a, b) => {
 
 console.log(productOfTwoNumber(2, 9));
 
-*/
 
 // Objects
 
@@ -94,6 +93,30 @@ const person = {
 
 person.greet();
 person.greet1();
+
+*/
+
+// Array
+
+const hobbies = ["sports", "cooking", 69, true, {Gym: "Running", activity:"swimming" }];
+// for (let i = 0; i < hobbies.length; i++) {
+    // console.log(i) // 1 2 3 4
+//     console.log(hobbies[i]); // all hobies 
+// };
+
+// for (let i of hobbies) {
+//     console.log(i) // all hobies
+// };
+
+// for (let i in hobbies) {
+//     console.log(i) // 1 2 3 4
+// };
+
+// console.log(hobbies.map(i => {
+//     return (`hobby is: ${i}`)   // it create one new array without changing previous array
+// }));
+// console.log(hobbies);
+
 
 
 
