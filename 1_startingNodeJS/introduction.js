@@ -206,13 +206,13 @@ console.log(toArray2(1,2,3,4)); // when we give 4 element then it give only firs
 
 // Destructor
 
-const admin = {
-    name: "Mohan",
-    age: 27,
-    detaill() {
-        console.log(`Hi iam + ${this.name}`);
-    }
-}
+// const admin = {
+//     name: "Mohan",
+//     age: 27,
+//     detaill() {
+//         console.log(`Hi iam + ${this.name}`);
+//     }
+// }
 
 // Destructor // Normal way
 
@@ -235,11 +235,62 @@ const admin = {
 // console.log(name, age); // Mohan 27
 
 
-// Array Destructuring 
-const intrest = ["Cooking", "Dancing"];
-const [intrest1, intrest2] = intrest;
-console.log(intrest2); // Dancing
-console.log(intrest1, intrest2); // Cooking Dancing
+// // Array Destructuring 
+// const intrest = ["Cooking", "Dancing"];
+// const [intrest1, intrest2] = intrest;
+// console.log(intrest2); // Dancing
+// console.log(intrest1, intrest2); // Cooking Dancing
 
 
+// Asynchronous 
 
+// callback function when function call it excute and give output and after 2sec it again call and give output
+
+// setTimeout(() => {      // Asynchronous Code 
+//     console.log("Iam Here");
+// }, 2000)
+// console.log("Hello");   // Synchronous Code
+// console.log("World!");
+
+
+// const fatchData = callback => {
+//     setTimeout(() => {
+//         callback("Done");
+//     }, 1500)
+// };
+
+// setTimeout(() => {
+//     console.log("Honey Bonny")
+//     fatchData(text => {
+//         console.log(text);
+//     })
+// }, 2000);
+
+// console.log("Hey");
+// console.log("Iam");
+
+// Create Promises
+
+const fatchData = () => {
+    const takePromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Done");
+        }, 1500)
+    }); 
+    return takePromise; 
+};
+
+setTimeout(() => {
+    console.log("Honey Bonny");
+    fatchData()
+        .then(text => {
+            console.log(text);
+            return fatchData();
+        })
+        .then(text1 => {    // when we have multiple promises
+            console.log(text1);
+        });
+}, 2000);
+
+console.log("Hey");
+console.log("Iam");
