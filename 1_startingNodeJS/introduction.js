@@ -147,7 +147,7 @@ const person1 = {
 const copyObject = {...person1};  // it gives copy of object
 console.log(copyObject);  // { name: 'Brijesh', age: 27, greet: [Function: greet] }
 
-*/
+
 
 // Rest Operator
 
@@ -174,3 +174,72 @@ console.log(toArray2(1,2,3,4)); // when we give 4 element then it give only firs
 // when we use operaton to pull element or propertyes out of array and objects its called spread operator
 
 // And when we use to murge multiple argument into an Array and used it in the argument list of a function then its a rest operator 
+
+*/
+
+// Questions
+
+// const obj1 = {'key1': 1}
+// console.log(obj1);  // { key1: 1 }
+
+// const obj2 = { ...obj1}
+// console.log(obj2); // { key1: 1 }
+
+// if(obj2 === obj1){
+//     console.log('same objects')
+// }
+// else{
+//     console.log('different objects')
+// }
+
+// ANS:- 
+// obj1 is created with the key-value pair 'key1': 1.
+// obj2 is created by spreading the properties of obj1 into a new object. This essentially creates a shallow copy of obj1.
+// The conditional statement if (obj2 === obj1) checks if obj2 and obj1 reference the exact same object in memory.
+// Since obj2 is a shallow copy of obj1 and not the same object in memory, the condition obj2 === obj1 will evaluate to false. Therefore, the code will output 'different objects'.
+
+// const obj3 = {'key1': 1 , 'key2' : 2}
+// const obj4 = { ...obj1, key1: 1000}
+// console.log(obj3)  // { key1: 1, key2: 2 }
+// console.log(obj4) // { key1: 1000, key2: 2 }
+
+
+// Destructor
+
+const admin = {
+    name: "Mohan",
+    age: 27,
+    detaill() {
+        console.log(`Hi iam + ${this.name}`);
+    }
+}
+
+// Destructor // Normal way
+
+// const printName = (adminData) => {
+//     console.log(adminData.name);
+// }
+
+// printName(admin); // Mohan
+
+// Through Destructuring
+
+// const printName1 = ({ name }) => {
+//     console.log(name); // Mohan 
+// }
+
+// printName1(admin)
+
+// Object Destructuring
+// const {name, age} = admin;
+// console.log(name, age); // Mohan 27
+
+
+// Array Destructuring 
+const intrest = ["Cooking", "Dancing"];
+const [intrest1, intrest2] = intrest;
+console.log(intrest2); // Dancing
+console.log(intrest1, intrest2); // Cooking Dancing
+
+
+
