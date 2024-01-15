@@ -62,7 +62,7 @@ console.log(addOne(2))
 const addRandom = () => 7 + 7; // without argument
 console.log(addRandom());
 
-*/
+
 
 const productOfTwoNumber = (a, b) => {
 
@@ -72,6 +72,28 @@ const productOfTwoNumber = (a, b) => {
 
 console.log(productOfTwoNumber(2, 9));
 
+*/
+
+// Objects
+
+const person = {
+    name: "Brijesh",  // in object not only group variable but you can also add function
+    age: 27,
+    // greet: () => {      // when we use arrow function and try to access this.name its not working because arrow function access global scope value
+    //     console.log(`Hi I am ${this.name}`) // this refer to global scope so we get output here undefine because this.name is not available in global scope but its is in local scope of person
+    greet: function() {
+        console.log(`Hi I am ${this.name}`) // its give value because normal function access the local scope of person
+    },
+
+    greet1() {
+        console.log(`Hi I am ${this.age}`) // we can also get output by this
+
+    }
+};
+
+
+person.greet();
+person.greet1();
 
 
 
