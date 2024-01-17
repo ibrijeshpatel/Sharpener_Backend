@@ -11,9 +11,9 @@
 
 const http = require('http');
 
-const server = http.createServer((req, res) => {
-    console.log(req.url, req.method, req.headers); // we can access specific value through 
-
+const server1 = http.createServer((req, res) => {
+    console.log(req.url, req.method, req.headers); // it give sequence value which you have written there in sequence
+    // process.exit(); // to reset the code
 });
 
-server.listen(3000); // 3000 is port which you have to use
+server1.listen(3000); 
