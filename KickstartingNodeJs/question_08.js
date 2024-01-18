@@ -1,3 +1,26 @@
+// 1. Explain the nodejs event driven architecture.
+// Node. js is an asynchronous, event-driven platform built on Chrome's V8 
+// JavaScript engine. It is particularly well-suited for building scalable network 
+// applications due to its non-blocking I/O model. At the heart of Node. js is the 
+// event loop, which handles events and executes callbacks associated with them.
+
+// 2. How can it basically scale to handle 1000 of requests a sec. 
+// What helps node JS even though it is single threaded?
+// The event-driven model is very efficient and allows NodeJS to handle 
+// thousands of concurrent requests with ease. Whenever a client sends a 
+// request the single thread will send that request to someone else. The 
+// current thread will not be busy working with that request. There are 
+// workers working for the server.
+// 3. What does process.exit do?
+// exit() function to forcefully terminate it. You need to do this 
+// manually by canceling the process in the terminal. 
+// The process. exit() is one of the commonly used and quick 
+// ways to terminate the process even if the asynchronous calls are still running
+
+// 4. What does req.url , req.header and req.method contain?
+// req.url is a string containing currently requested url path 
+// req.header an object containing the predefined/custom header given in the current request
+// req.method containing a string corresponding to HTTP methods of the reqyuest
 /*
 
 const http = require('http');
