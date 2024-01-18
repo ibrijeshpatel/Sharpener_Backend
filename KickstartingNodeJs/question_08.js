@@ -52,7 +52,8 @@ const server = http.createServer((req, res) => {
         res.write("<title>Home Page</title>");
 
         res.write("<Style>");
-        res.write("a {margin-right: 10px;}");
+        res.write("a {margin-right: 10px; color: black; text-decoration: none; }");
+        res.write("a.active { font-weight: bold; color: red; }");
         res.write("</Style>");
 
         res.write("</head>");
@@ -60,6 +61,7 @@ const server = http.createServer((req, res) => {
         res.write("<body>");
         res.write("<h1>Welcome to My Node JS Project</h1>");
         res.write("<div>");
+        res.write("<a href='/'>Home</a>");
         res.write("<a href='/about'>About</a>");
         res.write("<a href='/node'>Node</a>");
         res.write("</div>");
@@ -80,7 +82,8 @@ const server = http.createServer((req, res) => {
         res.write("<title>About Page</title>");
 
         res.write("<Style>");
-        res.write("a {margin-right: 10px;}");
+        res.write("a {margin-right: 10px; color: black; text-decoration: none; }");
+        res.write("a.active { font-weight: bold; color: red; }");
         res.write("</Style>");
 
         res.write("</head>");
@@ -89,6 +92,7 @@ const server = http.createServer((req, res) => {
         res.write("<h1>Welcome to About Us </h1>");
         res.write("<div>");
         res.write("<a href='/'>Home</a>");
+        res.write("<a href='/about'>About</a>");
         res.write("<a href='/node'>Node</a>");
         res.write("</div>");
         res.write("<p>कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।</p>");
@@ -108,9 +112,9 @@ const server = http.createServer((req, res) => {
         res.write("<title>Node Page</title>");
 
         res.write("<Style>");
-        res.write("a {margin-right: 10px;}");
+        res.write("a {margin-right: 10px; color: black; text-decoration: none; }");
+        res.write("a.active { font-weight: bold; color: red; }");
         res.write("</Style>");
-
         res.write("</head>");
 
         res.write("<body>");
@@ -118,6 +122,7 @@ const server = http.createServer((req, res) => {
         res.write("<div>");
         res.write("<a href='/'>Home</a>");
         res.write("<a href='/about'>About</a>");
+        res.write("<a href='/node'>Node</a>");
         res.write("</div>");
         res.write("<p>यदा यदा हि धर्मस्य ग्लानिर्भवति भारत:।</p>");
         res.write("<p>अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥</p>");
