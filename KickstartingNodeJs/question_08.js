@@ -51,19 +51,19 @@ const server = http.createServer((req, res) => {
         res.write("<head>");
         res.write("<title>Home Page</title>");
 
-        res.write("<Style>");
+        res.write("<style>");
         res.write("a {margin-right: 10px; color: black; text-decoration: none; }");
         res.write("a.active { font-weight: bold; color: red; }");
-        res.write("</Style>");
+        res.write("</style>");
 
         res.write("</head>");
 
         res.write("<body>");
         res.write("<h1>Welcome to My Node JS Project</h1>");
         res.write("<div>");
-        res.write("<a href='/'>Home</a>");
-        res.write("<a href='/about'>About</a>");
-        res.write("<a href='/node'>Node</a>");
+        res.write(`<a href='/' class='${getUrl.pathname === "/" ? "active" : "" }' >Home</a>`);
+        res.write(`<a href='/about' class='${getUrl.pathname === "/about" ? "active" : "" }' >About</a>`);
+        res.write(`<a href='/node' class='${getUrl.pathname === "/node" ? "active" : "" }'>Node</a>`);
         res.write("</div>");
         res.write("<p>हतो वा प्राप्यसि स्वर्गम्, जित्वा वा भोक्ष्यसे महिम्।</p>");
         res.write("<p>तस्मात् उत्तिष्ठ कौन्तेय युद्धाय कृतनिश्चय:॥</p>");
@@ -81,19 +81,19 @@ const server = http.createServer((req, res) => {
         res.write("<head>");
         res.write("<title>About Page</title>");
 
-        res.write("<Style>");
+        res.write("<style>");
         res.write("a {margin-right: 10px; color: black; text-decoration: none; }");
         res.write("a.active { font-weight: bold; color: red; }");
-        res.write("</Style>");
+        res.write("</style>");
 
         res.write("</head>");
 
         res.write("<body>");
         res.write("<h1>Welcome to About Us </h1>");
         res.write("<div>");
-        res.write("<a href='/'>Home</a>");
-        res.write("<a href='/about'>About</a>");
-        res.write("<a href='/node'>Node</a>");
+        res.write(`<a href='/' class='${getUrl.pathname === "/" ? "active" : "" }' >Home</a>`);
+        res.write(`<a href='/about' class='${getUrl.pathname === "/about" ? "active" : "" }' >About</a>`);
+        res.write(`<a href='/node' class='${getUrl.pathname === "/node" ? "active" : "" }'>Node</a>`);
         res.write("</div>");
         res.write("<p>कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।</p>");
         res.write("<p>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥</p>");
@@ -111,18 +111,18 @@ const server = http.createServer((req, res) => {
         res.write("<head>");
         res.write("<title>Node Page</title>");
 
-        res.write("<Style>");
+        res.write("<style>");
         res.write("a {margin-right: 10px; color: black; text-decoration: none; }");
         res.write("a.active { font-weight: bold; color: red; }");
-        res.write("</Style>");
+        res.write("</style>");
         res.write("</head>");
 
         res.write("<body>");
         res.write("<h1>Welcome to My Node Js projects </h1>");
         res.write("<div>");
-        res.write("<a href='/'>Home</a>");
-        res.write("<a href='/about'>About</a>");
-        res.write("<a href='/node'>Node</a>");
+        res.write(`<a href='/' class='${getUrl.pathname === "/" ? "active" : "" }' >Home</a>`);
+        res.write(`<a href='/about' class='${getUrl.pathname === "/about" ? "active" : "" }' >About</a>`);
+        res.write(`<a href='/node' class='${getUrl.pathname === "/node" ? "active" : "" }'>Node</a>`);
         res.write("</div>");
         res.write("<p>यदा यदा हि धर्मस्य ग्लानिर्भवति भारत:।</p>");
         res.write("<p>अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥</p>");
