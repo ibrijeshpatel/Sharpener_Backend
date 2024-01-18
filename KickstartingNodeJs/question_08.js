@@ -26,7 +26,7 @@ const server2 = http.createServer((req, res) => {
     
     res.write('</body>')
     res.write('</html>');
-    
+    res.end();
 });  
 
 server2.listen(3000); 
