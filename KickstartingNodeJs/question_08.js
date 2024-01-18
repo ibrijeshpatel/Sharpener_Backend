@@ -11,6 +11,7 @@
 // request the single thread will send that request to someone else. The 
 // current thread will not be busy working with that request. There are 
 // workers working for the server.
+
 // 3. What does process.exit do?
 // exit() function to forcefully terminate it. You need to do this 
 // manually by canceling the process in the terminal. 
