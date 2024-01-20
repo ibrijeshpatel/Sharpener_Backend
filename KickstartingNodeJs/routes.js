@@ -1,8 +1,10 @@
 const fs = require('fs');
 
 
-
-if (url === '/') {
+const requestHandler = (req, res) => {
+  const url = req.url;
+  const method = req.method;
+  if (url === '/') {
     res.setHeader("Content-Type", "text/html");
     res.write('<html>');
     res.write('<head><title>Enter Message</title><head>');
@@ -34,3 +36,21 @@ if (url === '/') {
   res.write('<body><h1>Hello from my Node.js Server!</h1></body>');
   res.write('</html>');
   res.end();
+
+
+}
+// module.exports = requestHandler;
+
+// module.exports = {
+//   handler: requestHandler,
+//   someText: "Some hard coded text" 
+// };
+
+// All are same
+
+// module.exports.handler = requestHandler;
+// module.exports.someText = "Some hard coded text";
+
+
+exports.handler = requestHandler;
+exports.someText = "Some hard coded text";
