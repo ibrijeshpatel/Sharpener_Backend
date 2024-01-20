@@ -1,0 +1,12 @@
+{
+  "name": "sharpener_backend",
+  "version": "1.0.0",
+  "description": "Complete Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Brijesh Patel",
+  "license": "ISC"
+}
