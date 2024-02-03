@@ -1,9 +1,10 @@
-const express = require("express");
+const express = require('express');
+
 const router = express.Router();
 
-router.get("/",(req, res, next) => {
-    res.send("<h1>Welcome to main page of this Web</h1>")
-    next();
+router.get('/', (req, res, next) => {
+  res.send('<h1>Hello from Express!</h1>');
 });
 
 module.exports = router;
+
