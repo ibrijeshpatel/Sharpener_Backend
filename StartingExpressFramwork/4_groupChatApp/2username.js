@@ -1,11 +1,12 @@
 const express = require("express");
+const path = require("path")
 const fs = require("fs");
 
 const router = express.Router();
 
 
 router.get("/login",(req, res) => {
-    res.send(`<form action="/printUser" method="POST"><input type="text" name="username"><button type="submit">Login</button></input></form>`)
+    res.sendFile(path.join(__dirname, "../", "4_groupChatApp", "username.html"));
 });
 
 router.post("/printUser",(req, res) => {

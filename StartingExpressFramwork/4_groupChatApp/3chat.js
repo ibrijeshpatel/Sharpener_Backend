@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path")
 const fs = require("fs");
 const router = express.Router();
 
@@ -7,10 +8,9 @@ router.get("/chat",(req, res) => {
         if (err) {
             data = "Not Chat Exist.";
         }
-        res.send(`${data} <form action="/sendMessage" method="POST" onsubmit="document.getElementById('username').value = localStorage.getItem('username')"><input type="text" name="message"><button type="submit">Send</button></input></form>`)
-    })   
-}); 
-
+        res.sendFile(path.join(__dirname, "../", "4_groupChatApp", "chat.html"));  // `${data} 
+    });
+});
 
 router.post("/sendMessage",(req, res) => {
     const message = req.body.message;                                                                                                                                                                                                                                                                                               
