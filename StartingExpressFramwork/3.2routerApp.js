@@ -1,4 +1,7 @@
 const express = require('express');
+const path = require('path');
+const router = express.Router();
+
 
 const app = express();
 
@@ -11,7 +14,7 @@ app.use(adminRoutes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-    res.status(404).send('<h1>Page not found</h1>');
+    res.sendFile(path.join(__dirname, "3_2RouterHTML", "pnf.html"));
 });
 
 app.listen(5000);

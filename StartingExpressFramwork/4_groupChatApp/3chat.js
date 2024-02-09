@@ -5,10 +5,10 @@ const router = express.Router();
 
 router.get("/chat",(req, res) => {
     fs.readFile("messages.txt", (err, data) => {
-        if (err) {
-            data = "Not Chat Exist.";
-        }
-        res.sendFile(path.join(__dirname, "../", "4_groupChatApp", "chat.html"));  // `${data} 
+        res.sendFile(path.join(__dirname, "../", "4_groupChatApp", "chat.html"));
+
+        // res.send(`${data} <form action="/sendMessage" method="POST" onsubmit="document.getElementById('username').value = localStorage.getItem('username')"><input type="text" name="message"><button type="submit">Send</button></input></form>`)   
+        
     });
 });
 
