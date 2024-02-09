@@ -15,6 +15,13 @@
             padding: 1rem;
         }
 
+        .border_element {
+            border: 2px solid #ee8844;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+
         .main_header {
             width: 100%;
             height: 3.5rem;
@@ -113,21 +120,24 @@
         </nav>
     </header>
 
-    <h3 class="book_a_call">Book A Call</h3>
-    <p class="book_a_call_message">Book a call slot and our representative will call you within 1hr of selected time</p>
     
     
 </body>
-    <main>
-        <form class="product_form" action="admin/contact_us" method="post">
-            <div class="form_control">
-                <label for="title">Name</label>
-                <input type="text" name="title" id="title">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">
-            </div>
-            
-            <button type="submit">GET A CALL</button>
-        </form>
-    </main>
+    <div class="border_element">
+        <h3 class="book_a_call">Book A Call</h3>
+        <p class="book_a_call_message">Book a call slot and our representative will call you within 1hr of selected time</p>
+    
+        <main>
+            <form class="product_form" action="admin/contact_us" method="post">
+                <div class="form_control">
+                    <label for="title">Name</label>
+                    <input type="text" name="title" id="title">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                
+                <button type="submit">GET A CALL</button>
+            </form>
+        </main>
+    </div>
 </html>
