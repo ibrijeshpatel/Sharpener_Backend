@@ -5,10 +5,10 @@ const productControler = require("../controler/controldata")
 
 router.get('/contact_us', productControler.getContact);
 
-router.post('/contact_us', (req, res) => {
-  console.log(req.body);
-  res.redirect('/');
-});
+// router.post('/contact_us', (req, res) => {
+//   console.log(req.body);
+//   res.redirect('/');
+// });
 
 module.exports = router;
 

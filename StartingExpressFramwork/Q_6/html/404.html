@@ -23,6 +23,16 @@
             background-color: #dbc441;
             padding: 0 1.5rem;
         }
+        .error_number {
+            text-align: center;
+            padding: 10px;
+            font-size: 100px;
+        }
+
+        .error_message {
+            text-align: center;
+            font-size: 30px;
+        }
 
         .main-header__nav {
             height: 100%;
@@ -61,10 +71,14 @@
             <ul class="main-header__item-list">
                 <li class="main-header__item"><a class="active" href="/">Shop</a></li>
                 <li class="main-header__item"><a href="/admin/add-product">Add Product</a></li>
+                <li class="main_header_item"><a href="/admin/contact_us">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Page Not Found!</h1>
+<div class="error">
+    <h1 class="error_number">404!</h1>
+    <h2 class="error_message">Page Not Found!</h2>
+</div>
 </body>
 
 </html>
