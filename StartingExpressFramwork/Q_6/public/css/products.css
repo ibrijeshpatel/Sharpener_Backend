@@ -1,0 +1,91 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+main {
+    padding: 1rem;
+}
+
+.main_header {
+    width: 100%;
+    height: 3.5rem;
+    background-color: #dbc443;
+    padding: 0 1.5rem;
+}
+
+.main_header_nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main_header_item_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main_header_item {
+    margin: 0 1rem;
+    padding: 0;
+}
+.main_header_item a {
+    text-decoration: none;
+    color: black;
+}
+
+.main_header_item a:hover,
+.main_header_item a:active,
+.main_header_item a.active {
+    color: #3e00a1;
+}
+
+.book_a_call {
+    margin-top: 2rem;
+    text-align: center;
+    color: #ee8844;
+}
+
+.book_a_call_message {
+    text-align: center;  
+}
+
+.product_form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+.form_control {
+    margin: 1rem 0;
+}
+
+.form_control label,
+.form_control input {
+    display: block;
+    width: 100%;
+}
+.form_control input {
+    border: 1px solid #dbc441;
+    font: inherit;
+    border-radius: 2px;
+}
+
+button {
+    width: 102%;
+    font: inherit;
+    border: 1px solid #3e00a1;
+    color: #3e00a1;
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover,
+button:active {
+    background-color: #3e00a1;
+    color: white;
+}
+
