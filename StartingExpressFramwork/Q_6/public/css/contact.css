@@ -92,7 +92,8 @@ button:active {
 
 .border_element {
     border: 2px solid rgb(238, 136, 68);
-    border-width: 2px;
-    margin: 10px 350px;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
 }
 

@@ -1,4 +1,4 @@
- 
+const Product = require("../models/product");
 const path = require("path")      // path require for finding the path
 const rootDir = require("../path_utility/path") // access the path where rootDir is available
  
@@ -7,8 +7,16 @@ exports.getAddProducts = (req, res) => {                   // exporting data and
 };
 
 exports.postAddProducts = (req, res) => {
-    products.push({title: req.body.title});
+    const product = new Product(req.body.title);
+    product.save();
     res.redirect('/');
+};
+
+exports.getShop = (req, res) => {
+    Product.fetchAll((products) => {
+        console.log(products);
+        res.sendFile(path.join(rootDir, "html", "shop.html"));
+    });
 };
 
 exports.getContact = (req, res) => {
@@ -18,6 +26,3 @@ exports.postAddContact = (req, res) => {
     res.redirect('/');
 };
 
-exports.getShop = (req, res) => {
-    res.sendFile(path.join(rootDir, "html", "shop.html"));
-};

@@ -46,12 +46,13 @@ main {
 .book_a_call {
     margin-top: 2rem;
     text-align: center;
-    color: #ee8844;
+    color: rgb(238, 136, 68);
 }
 
 .book_a_call_message {
     text-align: center;  
 }
+
 
 .product_form {
     width: 20rem;
@@ -87,5 +88,12 @@ button:hover,
 button:active {
     background-color: #3e00a1;
     color: white;
+}
+
+.border_element {
+    border: 2px solid rgb(238, 136, 68);
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
 }
 
