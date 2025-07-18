@@ -1,3 +1,3 @@
-# Sharpener_Backend
+# Learn_Backend
 
-Work Hard and try to get Job ASAP
+Work Hard and try to figureout how backend code work
